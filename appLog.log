@@ -1,0 +1,282 @@
+2023-03-24 10:46:49,666 [INFO] com.example.digishopkart.DigiShopKartApplication [restartedMain] Starting DigiShopKartApplication using Java 17.0.3 with PID 132990 (/home/ajay/Documents/Project Training/Frameworks/DigiShopKart/target/classes started by ajay in /home/ajay/Documents/Project Training/Frameworks/DigiShopKart)
+2023-03-24 10:46:49,674 [INFO] com.example.digishopkart.DigiShopKartApplication [restartedMain] The following 1 profile is active: "dev"
+2023-03-24 10:46:49,724 [INFO] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-03-24 10:46:49,724 [INFO] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-03-24 10:46:50,543 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-03-24 10:46:50,619 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 69 ms. Found 6 JPA repository interfaces.
+2023-03-24 10:46:51,355 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8085 (http)
+2023-03-24 10:46:51,367 [INFO] org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2023-03-24 10:46:51,368 [INFO] org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.1]
+2023-03-24 10:46:51,442 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2023-03-24 10:46:51,443 [INFO] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1717 ms
+2023-03-24 10:46:51,661 [INFO] org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-03-24 10:46:51,745 [INFO] org.hibernate.Version [restartedMain] HHH000412: Hibernate ORM core version 6.1.5.Final
+2023-03-24 10:46:52,225 [WARN] org.hibernate.orm.deprecation [restartedMain] HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-03-24 10:46:52,505 [INFO] com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2023-03-24 10:46:52,901 [INFO] com.zaxxer.hikari.pool.HikariPool [restartedMain] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@25dfed2d
+2023-03-24 10:46:52,903 [INFO] com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2023-03-24 10:46:52,927 [INFO] SQL dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-03-24 10:46:52,928 [WARN] org.hibernate.orm.deprecation [restartedMain] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-03-24 10:46:53,967 [INFO] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-03-24 10:46:53,973 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-03-24 10:46:54,623 [WARN] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-03-24 10:46:54,767 [DEBUG] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter [restartedMain] ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-03-24 10:46:54,881 [DEBUG] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [restartedMain] 37 mappings in 'requestMappingHandlerMapping'
+2023-03-24 10:46:55,615 [DEBUG] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [restartedMain] Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2023-03-24 10:46:55,624 [DEBUG] org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver [restartedMain] ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-03-24 10:46:55,643 [WARN] org.springframework.boot.autoconfigure.mustache.MustacheAutoConfiguration [restartedMain] Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)
+2023-03-24 10:46:55,763 [INFO] org.quartz.impl.StdSchedulerFactory [restartedMain] Using default implementation for ThreadExecutor
+2023-03-24 10:46:55,773 [INFO] org.quartz.core.SchedulerSignalerImpl [restartedMain] Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2023-03-24 10:46:55,773 [INFO] org.quartz.core.QuartzScheduler [restartedMain] Quartz Scheduler v.2.3.2 created.
+2023-03-24 10:46:55,774 [INFO] org.quartz.simpl.RAMJobStore [restartedMain] RAMJobStore initialized.
+2023-03-24 10:46:55,774 [INFO] org.quartz.core.QuartzScheduler [restartedMain] Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2023-03-24 10:46:55,775 [INFO] org.quartz.impl.StdSchedulerFactory [restartedMain] Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2023-03-24 10:46:55,775 [INFO] org.quartz.impl.StdSchedulerFactory [restartedMain] Quartz scheduler version: 2.3.2
+2023-03-24 10:46:55,775 [INFO] org.quartz.core.QuartzScheduler [restartedMain] JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@2aa6f848
+2023-03-24 10:46:55,802 [INFO] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2023-03-24 10:46:55,831 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8085 (http) with context path ''
+2023-03-24 10:46:55,833 [INFO] org.springframework.scheduling.quartz.SchedulerFactoryBean [restartedMain] Starting Quartz Scheduler now
+2023-03-24 10:46:55,833 [INFO] org.quartz.core.QuartzScheduler [restartedMain] Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2023-03-24 10:46:55,847 [INFO] com.example.digishopkart.DigiShopKartApplication [restartedMain] Started DigiShopKartApplication in 6.742 seconds (process running for 7.312)
+2023-03-24 10:47:01,507 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8085-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-03-24 10:47:01,507 [INFO] org.springframework.web.servlet.DispatcherServlet [http-nio-8085-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-03-24 10:47:01,507 [DEBUG] org.springframework.web.servlet.DispatcherServlet [http-nio-8085-exec-1] Detected StandardServletMultipartResolver
+2023-03-24 10:47:01,507 [DEBUG] org.springframework.web.servlet.DispatcherServlet [http-nio-8085-exec-1] Detected AcceptHeaderLocaleResolver
+2023-03-24 10:47:01,507 [DEBUG] org.springframework.web.servlet.DispatcherServlet [http-nio-8085-exec-1] Detected FixedThemeResolver
+2023-03-24 10:47:01,508 [DEBUG] org.springframework.web.servlet.DispatcherServlet [http-nio-8085-exec-1] Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@34a7033
+2023-03-24 10:47:01,509 [DEBUG] org.springframework.web.servlet.DispatcherServlet [http-nio-8085-exec-1] Detected org.springframework.web.servlet.support.SessionFlashMapManager@3eef9aa8
+2023-03-24 10:47:01,509 [DEBUG] org.springframework.web.servlet.DispatcherServlet [http-nio-8085-exec-1] enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-03-24 10:47:01,509 [INFO] org.springframework.web.servlet.DispatcherServlet [http-nio-8085-exec-1] Completed initialization in 2 ms
+2023-03-24 10:47:01,514 [DEBUG] org.springframework.web.servlet.DispatcherServlet [http-nio-8085-exec-1] GET "/api/v1/customers", parameters={}
+2023-03-24 10:47:01,524 [DEBUG] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [http-nio-8085-exec-1] Mapped to com.example.digishopkart.controller.CustomerController#fetchAllCustomers()
+2023-03-24 10:47:01,680 [DEBUG] org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor [http-nio-8085-exec-1] Using 'application/json', given [*/*] and supported [application/json]
+2023-03-24 10:47:01,685 [DEBUG] org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor [http-nio-8085-exec-1] Writing [[CustomerEntity(id=1, firstName=John, lastName=snow, email=john.snow@gmail.com, mobile=+1234567890,  (truncated)...]
+2023-03-24 10:47:01,740 [DEBUG] org.springframework.web.servlet.DispatcherServlet [http-nio-8085-exec-1] Completed 200 OK
+2023-03-24 10:47:12,479 [DEBUG] org.springframework.web.servlet.DispatcherServlet [http-nio-8085-exec-3] GET "/api/v1/discounts", parameters={}
+2023-03-24 10:47:12,479 [DEBUG] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [http-nio-8085-exec-3] Mapped to com.example.digishopkart.controller.DiscountController#fetchAllDiscounts()
+2023-03-24 10:47:12,493 [DEBUG] org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor [http-nio-8085-exec-3] Using 'application/json', given [*/*] and supported [application/json]
+2023-03-24 10:47:12,493 [DEBUG] org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor [http-nio-8085-exec-3] Writing [[DiscountEntity(id=1, couponName=FLAT100, discountType=FLAT, couponValue=100.0)]]
+2023-03-24 10:47:12,500 [DEBUG] org.springframework.web.servlet.DispatcherServlet [http-nio-8085-exec-3] Completed 200 OK
+2023-03-24 10:47:19,809 [DEBUG] org.springframework.web.servlet.DispatcherServlet [http-nio-8085-exec-4] GET "/api/v1/products", parameters={}
+2023-03-24 10:47:19,810 [DEBUG] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [http-nio-8085-exec-4] Mapped to com.example.digishopkart.controller.ProductController#fetchaAllProducts()
+2023-03-24 10:47:19,830 [DEBUG] org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor [http-nio-8085-exec-4] Using 'application/json', given [*/*] and supported [application/json]
+2023-03-24 10:47:19,830 [DEBUG] org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor [http-nio-8085-exec-4] Writing [[ProductEntity(id=1, productName=Men Sport Shoes, brand=AllenSolly, productPrice=974.0, productStatu (truncated)...]
+2023-03-24 10:47:19,839 [DEBUG] org.springframework.web.servlet.DispatcherServlet [http-nio-8085-exec-4] Completed 200 OK
+2023-03-24 10:47:33,512 [DEBUG] org.springframework.web.servlet.DispatcherServlet [http-nio-8085-exec-5] POST "/api/v1/products", parameters={}
+2023-03-24 10:47:33,512 [DEBUG] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [http-nio-8085-exec-5] Mapped to com.example.digishopkart.controller.ProductController#createProduct(Product)
+2023-03-24 10:47:33,550 [DEBUG] org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor [http-nio-8085-exec-5] Read "application/json;charset=UTF-8" to [class Product {<EOL>    id: null<EOL>    productName: Men Sport Shoes<EOL>    brand: AllenSolly<EOL>    productPrice (truncated)...]
+2023-03-24 10:47:33,619 [DEBUG] org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor [http-nio-8085-exec-5] Using 'application/json', given [*/*] and supported [application/json]
+2023-03-24 10:47:33,620 [DEBUG] org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor [http-nio-8085-exec-5] Writing [ProductEntity(id=102, productName=Men Sport Shoes, brand=AllenSolly, productPrice=974.0, productStat (truncated)...]
+2023-03-24 10:47:33,621 [DEBUG] org.springframework.web.servlet.DispatcherServlet [http-nio-8085-exec-5] Completed 201 CREATED
+2023-03-24 10:47:44,857 [DEBUG] org.springframework.web.servlet.DispatcherServlet [http-nio-8085-exec-6] DELETE "/api/v1/products/1", parameters={}
+2023-03-24 10:47:44,858 [DEBUG] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [http-nio-8085-exec-6] Mapped to com.example.digishopkart.controller.ProductController#deleteProduct(Integer)
+2023-03-24 10:47:44,882 [DEBUG] org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor [http-nio-8085-exec-6] Using 'application/json', given [*/*] and supported [application/json]
+2023-03-24 10:47:44,882 [DEBUG] org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor [http-nio-8085-exec-6] Writing ["Product 'Men Sport Shoes' is deleted successfully."]
+2023-03-24 10:47:44,883 [DEBUG] org.springframework.web.servlet.DispatcherServlet [http-nio-8085-exec-6] Completed 200 OK
+2023-03-24 10:47:51,416 [DEBUG] org.springframework.web.servlet.DispatcherServlet [http-nio-8085-exec-7] DELETE "/api/v1/products/2", parameters={}
+2023-03-24 10:47:51,417 [DEBUG] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [http-nio-8085-exec-7] Mapped to com.example.digishopkart.controller.ProductController#deleteProduct(Integer)
+2023-03-24 10:47:51,431 [DEBUG] org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor [http-nio-8085-exec-7] Using 'application/json', given [*/*] and supported [application/json]
+2023-03-24 10:47:51,431 [DEBUG] org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor [http-nio-8085-exec-7] Writing ["Product 'Men Sport Shoes' is deleted successfully."]
+2023-03-24 10:47:51,432 [DEBUG] org.springframework.web.servlet.DispatcherServlet [http-nio-8085-exec-7] Completed 200 OK
+2023-03-24 10:47:55,898 [DEBUG] org.springframework.web.servlet.DispatcherServlet [http-nio-8085-exec-8] DELETE "/api/v1/products/3", parameters={}
+2023-03-24 10:47:55,898 [DEBUG] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [http-nio-8085-exec-8] Mapped to com.example.digishopkart.controller.ProductController#deleteProduct(Integer)
+2023-03-24 10:47:55,911 [DEBUG] org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor [http-nio-8085-exec-8] Using 'application/json', given [*/*] and supported [application/json]
+2023-03-24 10:47:55,911 [DEBUG] org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor [http-nio-8085-exec-8] Writing ["Product 'Men Sport Shoes' is deleted successfully."]
+2023-03-24 10:47:55,911 [DEBUG] org.springframework.web.servlet.DispatcherServlet [http-nio-8085-exec-8] Completed 200 OK
+2023-03-24 10:48:02,167 [DEBUG] org.springframework.web.servlet.DispatcherServlet [http-nio-8085-exec-9] DELETE "/api/v1/products/4", parameters={}
+2023-03-24 10:48:02,168 [DEBUG] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [http-nio-8085-exec-9] Mapped to com.example.digishopkart.controller.ProductController#deleteProduct(Integer)
+2023-03-24 10:48:02,172 [DEBUG] org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor [http-nio-8085-exec-9] Using 'application/json', given [*/*] and supported [application/json]
+2023-03-24 10:48:02,172 [DEBUG] org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor [http-nio-8085-exec-9] Writing ["Please enter valid productId"]
+2023-03-24 10:48:02,173 [DEBUG] org.springframework.web.servlet.DispatcherServlet [http-nio-8085-exec-9] Completed 404 NOT_FOUND
+2023-03-24 10:48:06,080 [DEBUG] org.springframework.web.servlet.DispatcherServlet [http-nio-8085-exec-10] GET "/api/v1/products", parameters={}
+2023-03-24 10:48:06,081 [DEBUG] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [http-nio-8085-exec-10] Mapped to com.example.digishopkart.controller.ProductController#fetchaAllProducts()
+2023-03-24 10:48:06,089 [DEBUG] org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor [http-nio-8085-exec-10] Using 'application/json', given [*/*] and supported [application/json]
+2023-03-24 10:48:06,089 [DEBUG] org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor [http-nio-8085-exec-10] Writing [[ProductEntity(id=52, productName=Men Sport Shoes, brand=AllenSolly, productPrice=974.0, productStat (truncated)...]
+2023-03-24 10:48:06,091 [DEBUG] org.springframework.web.servlet.DispatcherServlet [http-nio-8085-exec-10] Completed 200 OK
+2023-03-24 10:48:27,552 [DEBUG] org.springframework.web.servlet.DispatcherServlet [http-nio-8085-exec-2] POST "/api/v1/orders", parameters={}
+2023-03-24 10:48:27,552 [DEBUG] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [http-nio-8085-exec-2] Mapped to com.example.digishopkart.controller.OrderController#createOrder(Order)
+2023-03-24 10:48:27,559 [DEBUG] org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor [http-nio-8085-exec-2] Read "application/json;charset=UTF-8" to [class Order {<EOL>    orderId: null<EOL>    activatedAt: null<EOL>    updatedAt: null<EOL>    discountPrice: null<EOL>   (truncated)...]
+2023-03-24 10:48:27,626 [DEBUG] org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor [http-nio-8085-exec-2] Using 'application/json', given [*/*] and supported [application/json]
+2023-03-24 10:48:27,628 [DEBUG] org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor [http-nio-8085-exec-2] Writing [OrderEntity(orderId=1, activatedAt=03/24/2023 at 10:48 am, updatedAt=03/24/2023 at 10:48 am, totalPr (truncated)...]
+2023-03-24 10:48:27,630 [DEBUG] org.springframework.web.servlet.DispatcherServlet [http-nio-8085-exec-2] Completed 201 CREATED
+2023-03-24 11:31:57,457 [INFO] org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener [File Watcher] Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2023-03-24 11:31:57,475 [INFO] org.quartz.core.QuartzScheduler [Thread-5] Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2023-03-24 11:31:57,483 [INFO] org.apache.catalina.core.StandardService [Thread-5] Stopping service [Tomcat]
+2023-03-24 11:31:57,486 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [Thread-5] Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-03-24 11:31:57,502 [INFO] org.springframework.scheduling.quartz.SchedulerFactoryBean [Thread-5] Shutting down Quartz Scheduler
+2023-03-24 11:31:57,503 [INFO] org.quartz.core.QuartzScheduler [Thread-5] Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2023-03-24 11:31:57,503 [INFO] org.quartz.core.QuartzScheduler [Thread-5] Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2023-03-24 11:31:57,503 [INFO] org.quartz.core.QuartzScheduler [Thread-5] Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2023-03-24 11:31:57,506 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [Thread-5] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-03-24 11:31:57,511 [INFO] com.zaxxer.hikari.HikariDataSource [Thread-5] HikariPool-1 - Shutdown initiated...
+2023-03-24 11:31:57,552 [INFO] com.zaxxer.hikari.HikariDataSource [Thread-5] HikariPool-1 - Shutdown completed.
+2023-03-24 11:31:57,790 [INFO] com.example.digishopkart.DigiShopKartApplication [restartedMain] Starting DigiShopKartApplication using Java 17.0.3 with PID 132990 (/home/ajay/Documents/Project Training/Frameworks/DigiShopKart/target/classes started by ajay in /home/ajay/Documents/Project Training/Frameworks/DigiShopKart)
+2023-03-24 11:31:57,803 [INFO] com.example.digishopkart.DigiShopKartApplication [restartedMain] The following 1 profile is active: "dev"
+2023-03-24 11:31:58,401 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-03-24 11:31:58,457 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 55 ms. Found 6 JPA repository interfaces.
+2023-03-24 11:31:58,693 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8085 (http)
+2023-03-24 11:31:58,694 [INFO] org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2023-03-24 11:31:58,695 [INFO] org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.1]
+2023-03-24 11:31:58,720 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2023-03-24 11:31:58,721 [INFO] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 915 ms
+2023-03-24 11:31:58,815 [INFO] org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-03-24 11:31:58,820 [WARN] org.hibernate.orm.deprecation [restartedMain] HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-03-24 11:31:58,830 [INFO] com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-2 - Starting...
+2023-03-24 11:31:58,885 [INFO] com.zaxxer.hikari.pool.HikariPool [restartedMain] HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@74a597c8
+2023-03-24 11:31:58,886 [INFO] com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-2 - Start completed.
+2023-03-24 11:31:58,887 [INFO] SQL dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-03-24 11:31:58,887 [WARN] org.hibernate.orm.deprecation [restartedMain] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-03-24 11:31:59,417 [INFO] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-03-24 11:31:59,419 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-03-24 11:31:59,865 [WARN] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-03-24 11:31:59,971 [DEBUG] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter [restartedMain] ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-03-24 11:32:00,017 [DEBUG] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [restartedMain] 37 mappings in 'requestMappingHandlerMapping'
+2023-03-24 11:32:01,015 [DEBUG] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [restartedMain] Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2023-03-24 11:32:01,028 [DEBUG] org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver [restartedMain] ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-03-24 11:32:01,047 [WARN] org.springframework.boot.autoconfigure.mustache.MustacheAutoConfiguration [restartedMain] Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)
+2023-03-24 11:32:01,147 [INFO] org.quartz.impl.StdSchedulerFactory [restartedMain] Using default implementation for ThreadExecutor
+2023-03-24 11:32:01,160 [INFO] org.quartz.core.SchedulerSignalerImpl [restartedMain] Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2023-03-24 11:32:01,160 [INFO] org.quartz.core.QuartzScheduler [restartedMain] Quartz Scheduler v.2.3.2 created.
+2023-03-24 11:32:01,161 [INFO] org.quartz.simpl.RAMJobStore [restartedMain] RAMJobStore initialized.
+2023-03-24 11:32:01,161 [INFO] org.quartz.core.QuartzScheduler [restartedMain] Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2023-03-24 11:32:01,161 [INFO] org.quartz.impl.StdSchedulerFactory [restartedMain] Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2023-03-24 11:32:01,161 [INFO] org.quartz.impl.StdSchedulerFactory [restartedMain] Quartz scheduler version: 2.3.2
+2023-03-24 11:32:01,161 [INFO] org.quartz.core.QuartzScheduler [restartedMain] JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@65b6209b
+2023-03-24 11:32:01,199 [INFO] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2023-03-24 11:32:01,219 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8085 (http) with context path ''
+2023-03-24 11:32:01,220 [INFO] org.springframework.scheduling.quartz.SchedulerFactoryBean [restartedMain] Starting Quartz Scheduler now
+2023-03-24 11:32:01,220 [INFO] org.quartz.core.QuartzScheduler [restartedMain] Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2023-03-24 11:32:01,227 [INFO] com.example.digishopkart.DigiShopKartApplication [restartedMain] Started DigiShopKartApplication in 3.571 seconds (process running for 2711.476)
+2023-03-24 11:32:01,233 [INFO] org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2023-03-24 11:38:52,258 [INFO] org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener [File Watcher] Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2023-03-24 11:38:52,260 [INFO] org.quartz.core.QuartzScheduler [Thread-7] Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2023-03-24 11:38:52,261 [INFO] org.apache.catalina.core.StandardService [Thread-7] Stopping service [Tomcat]
+2023-03-24 11:38:52,268 [INFO] org.springframework.scheduling.quartz.SchedulerFactoryBean [Thread-7] Shutting down Quartz Scheduler
+2023-03-24 11:38:52,269 [INFO] org.quartz.core.QuartzScheduler [Thread-7] Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2023-03-24 11:38:52,269 [INFO] org.quartz.core.QuartzScheduler [Thread-7] Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2023-03-24 11:38:52,269 [INFO] org.quartz.core.QuartzScheduler [Thread-7] Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2023-03-24 11:38:52,271 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [Thread-7] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-03-24 11:38:52,272 [INFO] com.zaxxer.hikari.HikariDataSource [Thread-7] HikariPool-2 - Shutdown initiated...
+2023-03-24 11:38:52,282 [INFO] com.zaxxer.hikari.HikariDataSource [Thread-7] HikariPool-2 - Shutdown completed.
+2023-03-24 11:38:52,403 [INFO] com.example.digishopkart.DigiShopKartApplication [restartedMain] Starting DigiShopKartApplication using Java 17.0.3 with PID 132990 (/home/ajay/Documents/Project Training/Frameworks/DigiShopKart/target/classes started by ajay in /home/ajay/Documents/Project Training/Frameworks/DigiShopKart)
+2023-03-24 11:38:52,404 [INFO] com.example.digishopkart.DigiShopKartApplication [restartedMain] The following 1 profile is active: "dev"
+2023-03-24 11:38:52,704 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-03-24 11:38:52,739 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 29 ms. Found 6 JPA repository interfaces.
+2023-03-24 11:38:52,877 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8085 (http)
+2023-03-24 11:38:52,878 [INFO] org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2023-03-24 11:38:52,878 [INFO] org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.1]
+2023-03-24 11:38:52,897 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2023-03-24 11:38:52,897 [INFO] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 491 ms
+2023-03-24 11:38:52,940 [INFO] org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-03-24 11:38:52,943 [WARN] org.hibernate.orm.deprecation [restartedMain] HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-03-24 11:38:52,949 [INFO] com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-3 - Starting...
+2023-03-24 11:38:52,963 [INFO] com.zaxxer.hikari.pool.HikariPool [restartedMain] HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3064c44a
+2023-03-24 11:38:52,963 [INFO] com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-3 - Start completed.
+2023-03-24 11:38:52,964 [INFO] SQL dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-03-24 11:38:52,964 [WARN] org.hibernate.orm.deprecation [restartedMain] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-03-24 11:38:53,207 [INFO] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-03-24 11:38:53,208 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-03-24 11:38:53,543 [WARN] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-03-24 11:38:53,586 [DEBUG] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter [restartedMain] ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-03-24 11:38:53,613 [DEBUG] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [restartedMain] 31 mappings in 'requestMappingHandlerMapping'
+2023-03-24 11:38:54,268 [DEBUG] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [restartedMain] Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2023-03-24 11:38:54,272 [DEBUG] org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver [restartedMain] ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-03-24 11:38:54,282 [WARN] org.springframework.boot.autoconfigure.mustache.MustacheAutoConfiguration [restartedMain] Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)
+2023-03-24 11:38:54,331 [INFO] org.quartz.impl.StdSchedulerFactory [restartedMain] Using default implementation for ThreadExecutor
+2023-03-24 11:38:54,342 [INFO] org.quartz.core.SchedulerSignalerImpl [restartedMain] Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2023-03-24 11:38:54,342 [INFO] org.quartz.core.QuartzScheduler [restartedMain] Quartz Scheduler v.2.3.2 created.
+2023-03-24 11:38:54,342 [INFO] org.quartz.simpl.RAMJobStore [restartedMain] RAMJobStore initialized.
+2023-03-24 11:38:54,342 [INFO] org.quartz.core.QuartzScheduler [restartedMain] Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2023-03-24 11:38:54,343 [INFO] org.quartz.impl.StdSchedulerFactory [restartedMain] Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2023-03-24 11:38:54,343 [INFO] org.quartz.impl.StdSchedulerFactory [restartedMain] Quartz scheduler version: 2.3.2
+2023-03-24 11:38:54,343 [INFO] org.quartz.core.QuartzScheduler [restartedMain] JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@102d38a6
+2023-03-24 11:38:54,353 [INFO] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2023-03-24 11:38:54,394 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8085 (http) with context path ''
+2023-03-24 11:38:54,395 [INFO] org.springframework.scheduling.quartz.SchedulerFactoryBean [restartedMain] Starting Quartz Scheduler now
+2023-03-24 11:38:54,395 [INFO] org.quartz.core.QuartzScheduler [restartedMain] Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2023-03-24 11:38:54,402 [INFO] com.example.digishopkart.DigiShopKartApplication [restartedMain] Started DigiShopKartApplication in 2.045 seconds (process running for 3124.651)
+2023-03-24 11:38:54,405 [INFO] org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2023-03-24 11:38:55,762 [INFO] org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener [File Watcher] Restarting due to 2 class path changes (1 addition, 1 deletion, 0 modifications)
+2023-03-24 11:38:55,763 [INFO] org.quartz.core.QuartzScheduler [Thread-11] Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2023-03-24 11:38:55,764 [INFO] org.apache.catalina.core.StandardService [Thread-11] Stopping service [Tomcat]
+2023-03-24 11:38:55,767 [INFO] org.springframework.scheduling.quartz.SchedulerFactoryBean [Thread-11] Shutting down Quartz Scheduler
+2023-03-24 11:38:55,767 [INFO] org.quartz.core.QuartzScheduler [Thread-11] Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2023-03-24 11:38:55,767 [INFO] org.quartz.core.QuartzScheduler [Thread-11] Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2023-03-24 11:38:55,767 [INFO] org.quartz.core.QuartzScheduler [Thread-11] Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2023-03-24 11:38:55,768 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [Thread-11] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-03-24 11:38:55,769 [INFO] com.zaxxer.hikari.HikariDataSource [Thread-11] HikariPool-3 - Shutdown initiated...
+2023-03-24 11:38:55,773 [INFO] com.zaxxer.hikari.HikariDataSource [Thread-11] HikariPool-3 - Shutdown completed.
+2023-03-24 11:38:55,899 [INFO] com.example.digishopkart.DigiShopKartApplication [restartedMain] Starting DigiShopKartApplication using Java 17.0.3 with PID 132990 (/home/ajay/Documents/Project Training/Frameworks/DigiShopKart/target/classes started by ajay in /home/ajay/Documents/Project Training/Frameworks/DigiShopKart)
+2023-03-24 11:38:55,899 [INFO] com.example.digishopkart.DigiShopKartApplication [restartedMain] The following 1 profile is active: "dev"
+2023-03-24 11:38:56,169 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-03-24 11:38:56,201 [INFO] org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 32 ms. Found 6 JPA repository interfaces.
+2023-03-24 11:38:56,345 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8085 (http)
+2023-03-24 11:38:56,347 [INFO] org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2023-03-24 11:38:56,347 [INFO] org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.1]
+2023-03-24 11:38:56,365 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2023-03-24 11:38:56,365 [INFO] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 464 ms
+2023-03-24 11:38:56,423 [INFO] org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-03-24 11:38:56,430 [WARN] org.hibernate.orm.deprecation [restartedMain] HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-03-24 11:38:56,437 [INFO] com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-4 - Starting...
+2023-03-24 11:38:56,459 [INFO] com.zaxxer.hikari.pool.HikariPool [restartedMain] HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@188cfd7
+2023-03-24 11:38:56,459 [INFO] com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-4 - Start completed.
+2023-03-24 11:38:56,459 [INFO] SQL dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-03-24 11:38:56,460 [WARN] org.hibernate.orm.deprecation [restartedMain] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-03-24 11:38:56,775 [INFO] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-03-24 11:38:56,775 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-03-24 11:38:57,115 [WARN] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-03-24 11:38:57,171 [DEBUG] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter [restartedMain] ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-03-24 11:38:57,196 [DEBUG] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [restartedMain] 37 mappings in 'requestMappingHandlerMapping'
+2023-03-24 11:38:57,886 [DEBUG] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [restartedMain] Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2023-03-24 11:38:57,894 [DEBUG] org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver [restartedMain] ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-03-24 11:38:57,917 [WARN] org.springframework.boot.autoconfigure.mustache.MustacheAutoConfiguration [restartedMain] Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)
+2023-03-24 11:38:57,988 [INFO] org.quartz.impl.StdSchedulerFactory [restartedMain] Using default implementation for ThreadExecutor
+2023-03-24 11:38:58,015 [INFO] org.quartz.core.SchedulerSignalerImpl [restartedMain] Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2023-03-24 11:38:58,015 [INFO] org.quartz.core.QuartzScheduler [restartedMain] Quartz Scheduler v.2.3.2 created.
+2023-03-24 11:38:58,015 [INFO] org.quartz.simpl.RAMJobStore [restartedMain] RAMJobStore initialized.
+2023-03-24 11:38:58,016 [INFO] org.quartz.core.QuartzScheduler [restartedMain] Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2023-03-24 11:38:58,016 [INFO] org.quartz.impl.StdSchedulerFactory [restartedMain] Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2023-03-24 11:38:58,016 [INFO] org.quartz.impl.StdSchedulerFactory [restartedMain] Quartz scheduler version: 2.3.2
+2023-03-24 11:38:58,016 [INFO] org.quartz.core.QuartzScheduler [restartedMain] JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@27e1f5
+2023-03-24 11:38:58,027 [INFO] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2023-03-24 11:38:58,036 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8085 (http) with context path ''
+2023-03-24 11:38:58,037 [INFO] org.springframework.scheduling.quartz.SchedulerFactoryBean [restartedMain] Starting Quartz Scheduler now
+2023-03-24 11:38:58,037 [INFO] org.quartz.core.QuartzScheduler [restartedMain] Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2023-03-24 11:38:58,047 [INFO] com.example.digishopkart.DigiShopKartApplication [restartedMain] Started DigiShopKartApplication in 2.18 seconds (process running for 3128.296)
+2023-03-24 11:38:58,049 [INFO] org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2023-03-24 19:01:09,381 [INFO] org.quartz.core.QuartzScheduler [SpringApplicationShutdownHook] Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2023-03-24 19:01:09,392 [INFO] org.springframework.scheduling.quartz.SchedulerFactoryBean [SpringApplicationShutdownHook] Shutting down Quartz Scheduler
+2023-03-24 19:01:09,393 [INFO] org.quartz.core.QuartzScheduler [SpringApplicationShutdownHook] Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2023-03-24 19:01:09,393 [INFO] org.quartz.core.QuartzScheduler [SpringApplicationShutdownHook] Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2023-03-24 19:01:09,393 [INFO] org.quartz.core.QuartzScheduler [SpringApplicationShutdownHook] Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2023-03-24 19:01:09,395 [INFO] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-03-24 19:01:09,398 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-4 - Shutdown initiated...
+2023-03-24 19:01:09,405 [INFO] com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-4 - Shutdown completed.

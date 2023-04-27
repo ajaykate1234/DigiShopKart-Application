@@ -1,0 +1,1182 @@
+openapi: 3.0.3
+info:
+  title: DigiShopKart
+  description: Apis of E-commerce application
+  contact:
+    name: Ajay Kate
+    url: http://digishopkart.com
+  version: '0.1'
+servers:
+  - url: http://localhost:8085
+#------------------------------PATHS ---------------------------------
+paths:
+  #  ********************************** CUSTOMER ***********************
+  /api/v1/customers:
+    post:
+      tags:
+        - customer
+      summary: add a customer
+      operationId: addCustomer
+      requestBody:
+        $ref: '#/components/requestBodies/CustomerBody'
+      responses:
+        200:
+          description: sucess response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Customer'
+        404:
+          $ref: '#/components/responses/NotFound'
+        400:
+          $ref: '#/components/responses/BadRequest'
+
+    get:
+      tags:
+        - customer
+      summary: fetch all customers
+      operationId: fetchAllCustomers
+      description: all customer
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Customer'
+        404:
+          $ref: '#/components/responses/NotFound'
+        401:
+          $ref: '#/components/responses/Unauthorized'
+
+  /api/v1/customers/{customerId}:
+    get:
+      tags:
+        - customer
+      operationId: fetchCustomer
+      summary: fetch a customer
+      description: fetching customer By customerId
+      parameters:
+        - in: path
+          name: customerId
+          required: true
+          schema:
+            type: integer
+      responses:
+        200:
+          description: "OK"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Customer'
+        404:
+          $ref: '#/components/responses/NotFound'
+        401:
+          $ref: '#/components/responses/Unauthorized'
+
+    delete:
+      tags:
+        - customer
+      operationId: deleteCustomer
+      summary: delete a customer
+      description: api to delete the customer
+      parameters:
+        - in: path
+          name: customerId
+          required: true
+          schema:
+            type: integer
+      responses:
+        200:
+          description: "Data deletion request Successfully Accepted"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Customer'
+        404:
+          $ref: '#/components/responses/NotFound'
+        401:
+          $ref: '#/components/responses/Unauthorized'
+    put:
+      tags:
+        - customer
+      summary: update a customer
+      operationId: updateCustomer
+      description: update Customer by using Customer_id
+      parameters:
+        - in: path
+          name: customerId
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        $ref: '#/components/requestBodies/CustomerBody'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Customer'
+        404:
+          $ref: '#/components/responses/NotFound'
+        401:
+          $ref: '#/components/responses/Unauthorized'
+
+
+  #  ****************************** CUSTOMER ADDRESS  *****************************
+
+  /api/v1/customerAddress:
+    get:
+      tags:
+        - CustomerAddress
+      summary: fetch all customerAddresses
+      operationId: fetchAllCustomerAddresses
+      description: API to fetch all customer Addresses
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/CustomerAddress'
+        404:
+          $ref: '#/components/responses/NotFound'
+        401:
+          $ref: '#/components/responses/Unauthorized'
+
+    post:
+      tags:
+        - CustomerAddress
+      summary: insert a CustomerAddress
+      operationId: insertCustomerAddress
+      description: API to insert Customer Address record
+      requestBody:
+        $ref: '#/components/requestBodies/CustomerAddressBody'
+      parameters:
+        - in: query
+          name: customerId
+          required: true
+          schema:
+            type: integer
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CustomerAddress'
+        404:
+          $ref: '#/components/responses/NotFound'
+        401:
+          $ref: '#/components/responses/Unauthorized'
+
+  /api/v1/customerAddress/{customerId}:
+    get:
+      tags:
+        - CustomerAddress
+      summary: fetch a CustomerAddresses
+      operationId: fetchCustomerAddress
+      description: API to fetch The Customer Address
+      parameters:
+        - in: path
+          name: customerId
+          required: true
+          schema:
+            type: integer
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CustomerAddress'
+        404:
+          $ref: '#/components/responses/NotFound'
+        401:
+          $ref: '#/components/responses/Unauthorized'
+
+  /api/v1/customerAddress/{addressId}:
+    put:
+      tags:
+        - CustomerAddress
+      summary: update a CustomerAddress
+      operationId: updateCustomerAddress
+      description: API to update the Customer Address by addressId
+      parameters:
+        - in: path
+          name: addressId
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        $ref: '#/components/requestBodies/CustomerAddressBody'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CustomerAddress'
+        404:
+          $ref: '#/components/responses/NotFound'
+        401:
+          $ref: '#/components/responses/Unauthorized'
+
+    delete:
+      tags:
+        - CustomerAddress
+      summary: delete a CustomerAddress
+      operationId: deleteCustomerAddress
+      description: API to delete Customer Address by addressId
+      parameters:
+        - in: path
+          name: addressId
+          required: true
+          schema:
+            type: integer
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CustomerAddress'
+        404:
+          $ref: '#/components/responses/NotFound'
+        401:
+          $ref: '#/components/responses/Unauthorized'
+
+
+  #  ********************************** PRODUCT  **********************************
+
+  /api/v1/products:
+    description: create Product
+    post:
+      tags:
+        - product
+      operationId: createProduct
+      summary: insert a Product
+      requestBody:
+        $ref: '#/components/requestBodies/ProductBody'
+      responses:
+        200:
+          description: sucess response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+        404:
+          $ref: '#/components/responses/NotFound'
+        400:
+          $ref: '#/components/responses/BadRequest'
+    get:
+      tags:
+        - product
+      operationId: fetchaAllProducts
+      summary: fetch all products
+      description: all Products
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Product'
+        404:
+          $ref: '#/components/responses/NotFound'
+        401:
+          $ref: '#/components/responses/Unauthorized'
+
+  /api/v1/products/{productId}:
+    get:
+      tags:
+        - product
+      operationId: fetchProduct
+      summary: fetch a product
+      description: fetch Product by id
+      parameters:
+        - in: path
+          name: productId
+          required: true
+          schema:
+            type: integer
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+        404:
+          $ref: '#/components/responses/NotFound'
+        401:
+          $ref: '#/components/responses/Unauthorized'
+
+    delete:
+      tags:
+        - product
+      operationId: deleteProduct
+      summary: delete a product
+      description: delete a product by id
+      parameters:
+        - in: path
+          name: productId
+          required: true
+          schema:
+            type: integer
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+        404:
+          $ref: '#/components/responses/NotFound'
+        401:
+          $ref: '#/components/responses/Unauthorized'
+
+    put:
+      tags:
+        - product
+      operationId: updateProduct
+      summary: update a product
+      description: updating a product by productId
+      parameters:
+        - in: path
+          name: productId
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        $ref: '#/components/requestBodies/ProductBody'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+        404:
+          $ref: '#/components/responses/NotFound'
+        401:
+          $ref: '#/components/responses/Unauthorized'
+
+  #  ****************************** VARIANT  *****************************
+
+  /api/v1/variant:
+    get:
+      tags:
+        - Variant
+      summary: fetch all Variants
+      operationId: fetchAllVariants
+      description: API to fetch all Variants
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Variant'
+        404:
+          $ref: '#/components/responses/NotFound'
+        401:
+          $ref: '#/components/responses/Unauthorized'
+
+  /api/v1/variant/{productId}:
+    post:
+      tags:
+        - Variant
+      summary: insert a Variant
+      operationId: insertVariant
+      description: API to insert Variant record
+      requestBody:
+        $ref: '#/components/requestBodies/VariantBody'
+      parameters:
+        - in: path
+          name: productId
+          required: true
+          schema:
+            type: integer
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Variant'
+        404:
+          $ref: '#/components/responses/NotFound'
+        401:
+          $ref: '#/components/responses/Unauthorized'
+
+  /api/v1/variant/{variantId}:
+    get:
+      tags:
+        - Variant
+      summary: fetch a Variant
+      operationId: fetchVariant
+      description: API to fetch the Variant
+      parameters:
+        - in: path
+          name: variantId
+          required: true
+          schema:
+            type: integer
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Variant'
+        404:
+          $ref: '#/components/responses/NotFound'
+        401:
+          $ref: '#/components/responses/Unauthorized'
+
+    put:
+      tags:
+        - Variant
+      summary: update a Variant
+      operationId: updateVariant
+      description: API to update the Variant by variantId
+      parameters:
+        - in: path
+          name: variantId
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        $ref: '#/components/requestBodies/VariantBody'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Variant'
+        404:
+          $ref: '#/components/responses/NotFound'
+        401:
+          $ref: '#/components/responses/Unauthorized'
+
+    delete:
+      tags:
+        - Variant
+      summary: delete a Variant
+      operationId: deleteVariant
+      description: API to delete Variant by variantId
+      parameters:
+        - in: path
+          name: variantId
+          required: true
+          schema:
+            type: integer
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Variant'
+        404:
+          $ref: '#/components/responses/NotFound'
+        401:
+          $ref: '#/components/responses/Unauthorized'
+
+  #  ********************************** DISCOUNT **********************************
+  /api/v1/discounts :
+    description: Api to create discount coupon
+    post:
+      tags:
+        - Discount
+      summary: fetch a discount
+      operationId: createDiscount
+      description: create Discount
+      requestBody:
+        $ref: '#/components/requestBodies/DiscountBody'
+      responses:
+        200:
+          description: sucess response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Discount'
+        404:
+          $ref: '#/components/responses/NotFound'
+        400:
+          $ref: '#/components/responses/BadRequest'
+    get:
+      tags:
+        - Discount
+      summary: fetch all discounts
+      operationId: fetchAllDiscounts
+      description: Api to fetch All the Discount coupons
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Discount'
+        404:
+          $ref: '#/components/responses/NotFound'
+        401:
+          $ref: '#/components/responses/Unauthorized'
+
+  /api/v1/discounts/{discountId}:
+    description: APi to fetch Discount Coupon by Id
+    get:
+      tags:
+        - Discount
+      operationId: fetchDiscount
+      summary: fetch a discount
+      description: getById api
+      parameters:
+        - in: path
+          name: discountId
+          required: true
+          schema:
+            type: integer
+      responses:
+        200:
+          description: sucess response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Discount'
+        404:
+          $ref: '#/components/responses/NotFound'
+        400:
+          $ref: '#/components/responses/BadRequest'
+
+    put:
+      tags:
+        - Discount
+      summary: update a discount
+      operationId: updateDiscount
+      description: Api to update Discount Coupons recors
+      parameters:
+        - in: path
+          name: discountId
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        $ref: '#/components/requestBodies/DiscountBody'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Discount'
+        404:
+          $ref: '#/components/responses/NotFound'
+        401:
+          $ref: '#/components/responses/Unauthorized'
+
+    delete:
+      tags:
+        - Discount
+      summary: delete a discount
+      operationId: deleteDiscount
+      description: Api to delete Discount Coupon By id
+      parameters:
+        - in: path
+          name: discountId
+          required: true
+          schema:
+            type: integer
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Discount'
+        404:
+          $ref: '#/components/responses/NotFound'
+        401:
+          $ref: '#/components/responses/Unauthorized'
+
+
+  #  ********************************** SUBSCRIPTION  **********************************
+
+  /api/v1/subscriptions:
+    post:
+      tags:
+        - Subscription
+      summary: create a suscription
+      operationId: createSubscription
+      description: Api to create Subscription by using Customer, Product, Discount
+      requestBody:
+        $ref: '#/components/requestBodies/SubscriptionBody'
+      responses:
+        200:
+          description: Success Response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Subscription'
+        404:
+          $ref: '#/components/responses/NotFound'
+        401:
+          $ref: '#/components/responses/Unauthorized'
+    get:
+      tags:
+        - Subscription
+      operationId: fetchAllSubscriptions
+      summary: fetch all suscriptions
+      description: APi to get All the sunscriptions
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Subscription'
+        404:
+          $ref: '#/components/responses/NotFound'
+        401:
+          $ref: '#/components/responses/Unauthorized'
+
+  /api/v1/subscription/{subscriptionId}:
+    get:
+      tags:
+        - Subscription
+      operationId: fetchSubscription
+      summary: fetch a suscription
+      description: Api to fetch sunscription by id
+      parameters:
+        - in: path
+          name: subscriptionId
+          required: true
+          schema:
+            type: integer
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Subscription'
+        404:
+          $ref: '#/components/responses/NotFound'
+        401:
+          $ref: '#/components/responses/Unauthorized'
+
+    delete:
+      tags:
+        - Subscription
+      operationId: deleteSubscription
+      summary: delete a suscription
+      description: Api to delete the subscription by id
+      parameters:
+        - in: path
+          name: subscriptionId
+          required: true
+          schema:
+            type: integer
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Subscription'
+        404:
+          $ref: '#/components/responses/NotFound'
+        401:
+          $ref: '#/components/responses/Unauthorized'
+
+    put:
+      tags:
+        - Subscription
+      operationId: updateSubscription
+      summary: update a suscription
+      description: Api to update subscription record by id
+      parameters:
+        - in: path
+          name: subscriptionId
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        $ref: '#/components/requestBodies/SubscriptionBody'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Subscription'
+        404:
+          $ref: '#/components/responses/NotFound'
+        401:
+          $ref: '#/components/responses/Unauthorized'
+
+  #  ********************************** ORDER  **********************************
+  /api/v1/orders:
+    post:
+      tags:
+        - Order
+      summary: create an order
+      operationId: createOrder
+      description: Api to create Order by using Customer, Product and Discount
+      requestBody:
+        $ref: '#/components/requestBodies/OrderBody'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Order'
+        404:
+          $ref: '#/components/responses/NotFound'
+        401:
+          $ref: '#/components/responses/Unauthorized'
+
+    get:
+      tags:
+        - Order
+      summary: fetch all orders
+      operationId: fetchAllOrders
+      description: APi to get All the Order
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Order'
+        404:
+          $ref: '#/components/responses/NotFound'
+        401:
+          $ref: '#/components/responses/Unauthorized'
+
+  /api/v1/orders/{orderId}:
+    get:
+      tags:
+        - Order
+      summary: fetch an order
+      description: Api to fetch Order by id
+      operationId: fetchOrder
+      parameters:
+        - in: path
+          name: orderId
+          required: true
+          schema:
+            type: integer
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Order'
+        404:
+          $ref: '#/components/responses/NotFound'
+        401:
+          $ref: '#/components/responses/Unauthorized'
+
+    delete:
+      tags:
+        - Order
+      summary: detete an order
+      operationId: deleteOrder
+      description: Api to delete the Order by id
+      parameters:
+        - in: path
+          name: orderId
+          required: true
+          schema:
+            type: integer
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Order'
+        404:
+          $ref: '#/components/responses/NotFound'
+        401:
+          $ref: '#/components/responses/Unauthorized'
+
+    put:
+      tags:
+        - Order
+      summary: update an order
+      operationId: updateOrder
+      description: Api to update Order record by id
+      parameters:
+        - in: path
+          name: orderId
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        $ref: '#/components/requestBodies/OrderBody'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Order'
+        404:
+          $ref: '#/components/responses/NotFound'
+        401:
+          $ref: '#/components/responses/Unauthorized'
+    patch:
+      tags:
+        - Order
+      summary: update Order Status
+      operationId: updateOrderStatus
+      description: API to update the status of order
+      parameters:
+        - in: path
+          name: orderId
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        $ref: '#/components/requestBodies/OrderBody'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Order'
+        404:
+          $ref: '#/components/responses/NotFound'
+        401:
+          $ref: '#/components/responses/Unauthorized'
+  #   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .
+
+#___________________RRESPONSES
+components:
+  responses:
+    NotFound:
+      description: The specified resource was not found
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Errors'
+    Unauthorized:
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Errors'
+    BadRequest:
+      description: Bad request
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Errors'
+  #___________________REQUEST BODY_____________________________________
+
+  requestBodies:
+
+    SubscriptionBody:
+      description: A JSON object Contenting Subscription information.
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Subscription'
+
+    DiscountBody:
+      description: A JSON object Contenting Discount information.
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Discount'
+
+    CustomerBody:
+      description: A JSON object Contenting Customer and CustomerAddress information
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Customer'
+
+    CustomerAddressBody:
+      description: A JSON object Contenting CustomerAddress information
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/CustomerAddress'
+
+    ProductBody:
+      description: A JSON object Contenting Product and variant information
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Product'
+
+    VariantBody:
+      description: A JSON object Contenting Variant
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Variant'
+
+    OrderBody:
+      description: A JSON object Contenting Order information
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Order'
+
+
+  #___________________SCHEMAS
+  schemas:
+    Errors:
+      type: object
+      properties:
+        code:
+          type: string
+        message:
+          title: string
+      required:
+        - code
+        - message
+
+    Customer:
+      type: object
+      required:
+        - firstName
+        - lastName
+        - email
+        - mobile
+        - customerStatus
+        - customerAddress
+      properties:
+        id:
+          type: integer
+        firstName:
+          type: string
+          example: Ajay
+          pattern: '^[a-zA-Z]+(\s[a-zA-Z]+)?$'
+        lastName:
+          type: string
+          example: Kate
+          pattern: '^[a-zA-Z]+(\s[a-zA-Z]+)?$'
+        email:
+          type: string
+          example: ajaykate@gmail.com
+          format: email
+        mobile:
+          type: string
+          example: +919876543210
+        customerStatus:
+          type: string
+          enum:
+            - active
+            - inactive
+          default: active
+          nullable: false
+        customerAddress:
+          type: array
+          items:
+            $ref: '#/components/schemas/CustomerAddress'
+
+    CustomerAddress:
+      type: object
+      required:
+        - customerFullName
+        - country
+        - state
+        - town
+        - area
+        - houseOrBuilding
+        - landmark
+        - pinCode
+        - mobile
+      properties:
+        id:
+          type: integer
+        addressType:
+          type: string
+          enum:
+            - shipping
+            - billing
+        customerFullName:
+          type: string
+        country:
+          type: string
+        state:
+          type: string
+        town:
+          type: string
+        area:
+          type: string
+        houseOrBuilding:
+          type: string
+        landmark:
+          type: string
+        pinCode:
+          type: integer
+        mobile:
+          type: string
+
+    Product:
+      type: object
+      required:
+        - productName
+        - createdAt
+        - productCode
+        - productPrice
+        - productStatus
+        - productCategory
+      properties:
+        id:
+          type: integer
+        productName:
+          type: string
+        brand:
+          type: string
+        productPrice:
+          type: number
+          minimum: 1
+          format: double
+        productCategory:
+          type: string
+          enum:
+            - electronics
+            - cloths
+            - footwares
+            - jwelleries
+            - gadgets
+        productStatus:
+          type: string
+          enum:
+            - active
+            - inactive
+        variant:
+          type: array
+          items:
+            $ref: '#/components/schemas/Variant'
+
+    Variant:
+      type: object
+      required:
+        - colour
+        - size
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+          example: Size, Colour, etc...
+        value:
+          type: string
+        status :
+          type: string
+          enum:
+            - active
+            - inactive
+
+
+    Discount:
+      type: object
+      required:
+        - discountType
+        - couponValue
+      properties:
+        id:
+          type: integer
+        couponName:
+          type: string
+        discountType:
+          type: string
+          enum:
+            - FLAT
+            - PERCENTAGE
+        couponValue:
+          type: number
+          format: double
+
+    Subscription:
+      type: object
+      properties:
+        subscriptionId:
+          type: integer
+        activatedAt:
+          type: string
+          format: date-time
+          example: '1955-04-23T13:22:52.685Z'
+        status:
+          type: string
+          enum: [active, inactive]
+        customer:
+          $ref: '#/components/schemas/Customer'
+        products:
+          type: array
+          items:
+            $ref: '#/components/schemas/Product'
+        discount:
+          $ref: '#/components/schemas/Discount'
+
+    Order:
+      type: object
+      required:
+        - orderId
+        - activatedAt
+        - updatedAt
+        - productPrice
+        - customer
+        - product
+        - discount
+      properties:
+        orderId:
+          type: integer
+        activatedAt:
+          type: string
+        updatedAt:
+          type: string
+        discountPrice:
+          type: number
+          minimum: 1
+          format: double
+        orderStatus:
+          type: string
+          enum:
+            - confirmed
+            - placed
+            - dispatched
+            - outfordelivery
+            - delivered
+            - cancelled
+        customer:
+          $ref: '#/components/schemas/Customer'
+        products:
+          type: array
+          items:
+            $ref: '#/components/schemas/Product'
+        discount:
+          $ref: '#/components/schemas/Discount'
+
+    #---------------------------------------------------------------------------
