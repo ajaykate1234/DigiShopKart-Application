@@ -1,0 +1,264 @@
+{
+	"info": {
+		"_postman_id": "a4da1fda-036d-46c4-aa30-f3993b67b391",
+		"name": "customer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24558156",
+		"_collection_link": "https://lively-meteor-530828.postman.co/workspace/DigiShopKart~fa6dcfd7-b126-44d4-900e-83275b5c47c6/collection/24558156-a4da1fda-036d-46c4-aa30-f3993b67b391?action=share&source=collection_link&creator=24558156"
+	},
+	"item": [
+		{
+			"name": "Customer Address",
+			"item": [
+				{
+					"name": "Add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"addressType\": \"billing\",\n    \"customerFullName\": \"Kate harry Winslate\",\n    \"country\": \"ENG\",\n    \"state\": \"london\",\n    \"town\": \"UEON\",\n    \"area\": \"EER\",\n    \"houseOrBuilding\": \"James Tower\",\n    \"landmark\": \"jank market\",\n    \"pinCode\": 9977.00,\n    \"mobile\": \"+0000000000\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8085/api/v1/customerAddress",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"customerAddress"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "remove",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 152,\n    \"addressType\": \"shipping\",\n    \"customerFullName\": \"aaa bbb ccc\",\n    \"country\": \"ENG\",\n    \"state\": \"london\",\n    \"town\": \"UEON\",\n    \"area\": \"EER\",\n    \"houseOrBuilding\": \"James Tower\",\n    \"landmark\": \"jank market\",\n    \"pinCode\": 9977.00,\n    \"mobile\": \"+0000000000\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8085/api/v1/customerAddress/?addressId=152",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"customerAddress",
+								""
+							],
+							"query": [
+								{
+									"key": "addressId",
+									"value": "152"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "fetchByCustomerId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/v1/customerAddress/?addressId=302",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"customerAddress",
+								""
+							],
+							"query": [
+								{
+									"key": "addressId",
+									"value": "302"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "fetchById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/v1/customerAddress?customerId=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"customerAddress"
+							],
+							"query": [
+								{
+									"key": "customerId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstName\": \"Kate\",\n    \"lastName\": \"Winslate\",\n    \"email\": \"katewinslate@gmail.com\",\n    \"mobile\": \"+11111111111\",\n    \"CustomerStatusEnum\": \"active\",\n    \"customerAddress\":[ {\n        \"addressType\": \"shipping\",\n        \"customerFullName\": \"Kate harry Winslate\",\n        \"country\": \"ENG\",\n        \"state\": \"london\",\n        \"town\": \"UEON\",\n        \"area\": \"EER\",\n        \"houseOrBuilding\": \"James Tower\",\n        \"landmark\": \"jank market\",\n        \"pinCode\": 997766,\n        \"mobile\": \"+222222222222\"\n    },\n    {\n        \"addressType\": \"billing\",\n        \"customerFullName\": \"abc def \",\n        \"country\": \"ENG\",\n        \"state\": \"london\",\n        \"town\": \"UEON\",\n        \"area\": \"EER\",\n        \"houseOrBuilding\": \"James Tower\",\n        \"landmark\": \"jank market\",\n        \"pinCode\": 9977,\n        \"mobile\": \"+7777777777\"\n    }]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8085/api/v1/customers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "fetchAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/v1/customers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8085/api/v1/customers/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"customers",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateById",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 1,\n    \"firstName\": \"Kate\",\n    \"lastName\": \"Winslate\",\n    \"email\": \"katewinslate@gmail.com\",\n    \"mobile\": \"+11111111111\",\n    \"customerStatus\": \"active\",\n    \"customerAddress\": [\n        {\n            \"id\": 1,\n            \"addressType\": \"shipping\",\n            \"customerFullName\": \"Kate harry Winslate\",\n            \"country\": \"ENG\",\n            \"state\": \"london\",\n            \"town\": \"UEON\",\n            \"area\": \"EER\",\n            \"houseOrBuilding\": \"James Tower\",\n            \"landmark\": \"jank market\",\n            \"pinCode\": 997766,\n            \"mobile\": \"+222222222222\"\n        },\n        {\n            \"id\": 2,\n            \"addressType\": \"billing\",\n            \"customerFullName\": \"abc def \",\n            \"country\": \"ENG\",\n            \"state\": \"london\",\n            \"town\": \"UEON\",\n            \"area\": \"EER\",\n            \"houseOrBuilding\": \"James Tower\",\n            \"landmark\": \"jank market\",\n            \"pinCode\": 9977,\n            \"mobile\": \"+8888888888\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8085/api/v1/customers/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"customers",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
