@@ -1,4 +1,10 @@
 # DigiShopKart
+1. Customer (CustomerAddress)
+2. Discount
+3. Product (Varient)
+4. Order(Customer,Discount, Product)
+5. 
+
 •Started a new project from scratch using Spring Boot, and Maven by understanding business requirement documents.
 •Integrated external APIs to get output, and customized this output to respond as required business logic.
 •Created separate microservices for all journey modules.
