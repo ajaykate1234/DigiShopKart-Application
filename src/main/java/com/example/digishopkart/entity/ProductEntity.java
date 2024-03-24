@@ -29,10 +29,13 @@ public class ProductEntity {
 
   @NotEmpty(message = "productName should not be null")
   private String productName;
-  @NotEmpty(message = "productCode should not be null")
+
+  @NotEmpty(message = "brand should not be null")
   private String brand;
+
   @NotNull(message = "productPrice should not be null")
   private double productPrice;
+
   @NonNull
   @Enumerated(EnumType.STRING)
   @Column(name = "status")

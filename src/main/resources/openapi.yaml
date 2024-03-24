@@ -1047,7 +1047,7 @@ components:
       required:
         - productName
         - createdAt
-        - productCode
+        - brand
         - productPrice
         - productStatus
         - productCategory
