@@ -21,6 +21,7 @@ public class CustomerEntity {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "customerId", nullable = false)
     private UUID id;*/
+    //ajay kate
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
